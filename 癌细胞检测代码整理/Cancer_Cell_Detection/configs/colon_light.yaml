@@ -1,0 +1,36 @@
+# 轻量化配置 - 结肠癌检测 (适用于6GB显存)
+General:
+    result_dir: ./results/colon_Dataset_PT_light
+    fold_num: 1
+    seed: 2023
+
+Data:
+    n_classes: 2
+    data_dir: ./feature/Dataset_PT/
+    external_dir: ./csv/Dataset_PT.csv
+    anatomic: 13
+
+Model:
+    model_name: CHIEF
+    size_arg: tiny                    # 改为tiny模型，减少参数量
+    logits_field: bag_logits
+    dropout: 0.3                     # 增加dropout防止过拟合
+    
+Train:
+    optimizer: Adam
+    reg: 1.0e-5
+    lr: 2.0e-4                       # 稍微降低学习率
+    max_epochs: 30                   # 减少训练轮数
+    train_function: CHIEF
+    val_function: Embedding
+    CosineAnnealingLR:
+        T_max: 30
+        eta_min: 1.0e-6
+    Early_stopping:
+        type: auc
+        patient: 3                   # 提前停止更激进
+        stop_epoch: 5
+    batch_size: 8                    # 大幅减小batch size (原来32->8)
+    gradient_accumulation_steps: 4   # 使用梯度累积模拟大batch size
+    mixed_precision: true            # 启用混合精度训练
+    max_bag_size: 512               # 限制每个包的最大patch数量
