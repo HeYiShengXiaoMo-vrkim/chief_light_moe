@@ -246,9 +246,9 @@ if batch_idx % 10 == 0:
 ### Software Dependencies
 ```txt
 Core Framework:
-- Python 3.8+
-- PyTorch 1.8.1+cu111
-- torchvision 0.9.1+cu111
+- Python 3.8+ (recommended 3.8-3.10)
+- PyTorch 1.8.1+ with CUDA 11.1+ (or compatible version)
+- torchvision 0.9.1+ (matching PyTorch version)
 
 Data Processing:
 - numpy 1.22.3
@@ -430,7 +430,7 @@ Copyright 2024 CHIEF Light MoE Project
 
 ---
 
-**Report Generated**: 2025-11-26
+**Report Generated**: 2024-11-26
 **Project Status**: Active Development
 **Maintainer**: HeYiShengXiaoMo-vrkim
 

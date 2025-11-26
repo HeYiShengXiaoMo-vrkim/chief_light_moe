@@ -76,7 +76,7 @@ chief_light_moe/
 
 ```bash
 # 克隆仓库 | Clone repository
-git clone https://github.com/HeYiShengXiaoMo-vrkim/chief_light_moe.git
+git clone <repository-url>
 cd chief_light_moe/癌细胞检测代码整理
 
 # 安装依赖 | Install dependencies
@@ -99,6 +99,9 @@ python quick_start.py --run breast
 
 #### 方法2: Windows批处理 | Windows Batch Script
 ```bash
+# 进入项目目录 | Enter project directory
+cd 癌细胞检测代码整理
+
 # 标准版 | Standard version
 run_detection.bat
 
@@ -140,10 +143,10 @@ python classification_eval_light.py \
 
 ## 📚 文档 | Documentation
 
-- 📊 **[项目分析报告.md](./项目分析报告.md)** - 完整的项目技术分析（中文）
-- 📊 **[PROJECT_ANALYSIS.md](./PROJECT_ANALYSIS.md)** - Complete technical analysis (English)
-- 📝 **[癌细胞检测详细说明.md](./癌细胞检测代码整理/癌细胞检测详细说明.md)** - 详细技术文档
-- 📗 **[轻量化说明.md](./癌细胞检测代码整理/轻量化说明.md)** - 轻量化版本优化说明
+- 📊 **[项目分析报告.md](项目分析报告.md)** - 完整的项目技术分析（中文）
+- 📊 **[PROJECT_ANALYSIS.md](PROJECT_ANALYSIS.md)** - Complete technical analysis (English)
+- 📝 **[癌细胞检测详细说明.md](癌细胞检测代码整理/癌细胞检测详细说明.md)** - 详细技术文档
+- 📗 **[轻量化说明.md](癌细胞检测代码整理/轻量化说明.md)** - 轻量化版本优化说明
 
 ## 🎓 技术原理 | Technical Principles
 
